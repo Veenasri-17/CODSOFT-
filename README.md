@@ -1,27 +1,54 @@
-import random
-import string
+# Password Generator
 
-def generate_password(length):
-    if length < 1:
-        return "Password length must be at least 1."
-    
-    # Define character pools
-    characters = string.ascii_letters + string.digits + string.punctuation
+## Overview
 
-    # Generate random password
-    password = ''.join(random.choice(characters) for _ in range(length))
-    return password
+A Python-based Password Generator that creates strong and random passwords based on the user-specified length. The application uses letters, numbers, and special characters to generate secure passwords.
 
-def main():
-    try:
-        # User input for password length
-        length = int(input("Enter the desired length of the password: "))
-        
-        # Generate and display password
-        password = generate_password(length)
-        print(f"Generated Password: {password}")
-    except ValueError:
-        print("Invalid input! Please enter a valid number.")
+## Features
 
-if __name__ == "__main__":
-    main()
+* Generate random passwords
+* User-defined password length
+* Includes:
+
+  * Uppercase letters
+  * Lowercase letters
+  * Numbers
+  * Special characters
+* Input validation
+* Simple command-line interface
+
+## Technologies Used
+
+* Python
+* random module
+* string module
+
+## How to Run
+
+1. Clone the repository.
+2. Open the project folder.
+3. Run:
+
+```bash
+python password_generator.py
+```
+
+## Sample Output
+
+```text
+Enter the desired length of the password: 12
+
+Generated Password: A#8kP@2mX!9q
+```
+
+## Learning Outcomes
+
+* Python Functions
+* Exception Handling
+* Random Number Generation
+* String Manipulation
+* User Input Validation
+
+## Author
+
+Veenasri Vakeel
